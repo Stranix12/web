@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>Ejercicios de Lógica de Programación</title>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      /* Contenedor de las tarjetas */
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Estilos de las tarjetas */
+      .card {
+        flex: 1 1 calc(20% - 20px); /* Ajuste para 5 tarjetas por fila */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+        min-height: 180px;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      .card p {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .card a {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .card a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+          <img src="../../img/logo.jpg" alt="Logo" />
+      </div>
+      <ul class="navbar-links">
+          <li><a href="../../proyecto.html">Inicio</a></li>
+          <li><a href="../../sobrenosotros.html">Acerca de</a></li>
+      </ul>
+  </nav>
+    <h1>Ejercicios de cadenas</h1>
+    <div class="grid">
+      <!-- 40 Tarjetas (5 por fila, 8 filas en total) -->
+      <!-- Fila 1 -->
+      <!--ejercicio 1-->
+      <div class="card">
+        <h3>Ejercicio 1</h3>
+        <p>	Ingresar un nombre y un apellido: dado un nombre y apellido ingresado presentarlo concatenado: apellido y nombre</p>
+        <a href="../cadenas/Concactenar nombres y apellidos.html">Ver Ejercicio 1</a>
+      </div>
+      <!--Ejercicio 2-->
+      <div class="card">
+        <h3>Ejercicio 2</h3>
+        <p>Comparar frases: Dada dos frases indicar si son iguales o la primera en mayor o menor que la segunda.</p>
+        <a href="../cadenas/comparar frases.html"
+          >Ver Ejercicio 2</a >
+        </div>
+        <!--Ejercicio 3-->
+      <div class="card">
+        <h3>Ejercicio 3</h3>
+        <p>Ingresar palabra: Ingresar una palabra y crear otra palabra con cada carácter de la primera palabra dejando un espacio entre cada caracter.</p>
+        <a href="../cadenas/Palabra con espacio.html">Ver Ejercicio 3</a>
+      </div>
+      <!--Ejercicio 4-->
+      <div class="card">
+        <h3>Ejercicio 4</h3>
+        <p>
+          Dada una frase: presentar cada carácter con su respectivo código asccii. Para este ejercicio usar una función de javascript que devuelve el código asccii del carácter
+        </p>
+        <a href="../cadenas/Palabra codigo ascci.html">Ver Ejercicio 4</a>
+      </div>
+      <!--Ejercicio 5-->
+      <div class="card">
+        <h3>Ejercicio 5</h3>
+        <p>Invertir una palabra: Invertir una frase ingresada por el usuario</p>
+        <a href="../cadenas/Invertir la frase.html">Ver Ejercicio 5</a>
+      </div>
+      
+      <div class="card">
+        <h3>Ejercicio 6</h3>
+        <p>
+          Contar vocales en una palabra: Contar cuántas vocales tiene una palabra ingresada por el usuario.
+        </p>
+        <a href="../cadenas/Contar Vocales.html">Ver Ejercicio 6</a>
+      </div>
+      <div class="card">
+        <h3>Ejercicio 7</h3>
+        <p>
+          Contar las letras del alfabeto en una palabra: Contar cuántas letras del alfabeto tiene una palabra ingresada por el usuario.
+        </p>
+        <a href="../cadenas/Contar  el alfabeto.html">Ver Ejercicio 7</a>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="card">
+        <h3>Ejercicio 8</h3>
+        <p>Contar dígitos de una frase: Contar cuántos dígitos tiene una frase ingresada por el usuario.
+        </p>
+        <a href="../cadenas/Contar digitos de una frase.html">Ver Ejercicio 8</a>
+      </div>
+      <div class="card">
+        <h3>Ejercicio 9</h3>
+        <p>Contar los signos de puntuación en una palabra: Contar cuántos signos de puntuación tiene una palabra ingresada por el usuario.
+        </p>
+        <a href="../cadenas/Contar los signos de puntuacion.html">Ver Ejercicio 9</a>
+      </div>
+      <div class="card">
+        <h3>Ejercicio 10</h3>
+        <p>Contar palabras en una frase: Contar cuántas palabras tiene una frase ingresada por el usuario.
+        </p>
+        <a href="../cadenas/Contar palabra en una frase.html">Ver Ejercicio 10</a>
+      </div>
+      
+      <!-- Fila 3 - Añadir más tarjetas hasta completar 8 filas -->
+      <!-- Continua este mismo patrón hasta completar 40 tarjetas -->
+
+      <!-- ... (continuar añadiendo tarjetas) ... -->
+    </div>
+  </body>
+</html>

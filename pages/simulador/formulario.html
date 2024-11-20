@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Expandible con Imagenes</title>
+  <!-- Vincula el archivo CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo para centrar el formulario en la página */
+    .contenedor {
+      max-width: 600px;
+      margin: 0 auto; /* Centrado horizontal */
+      padding: 30px;
+      border: 2px solid #007bff; /* Borde azul */
+      border-radius: 10px;
+      background-color: #f9f9f9; /* Fondo suave */
+      display: flex;
+      flex-direction: column; /* Asegura que las preguntas y las imágenes se apilen verticalmente */
+      gap: 20px; /* Añade espacio entre cada pregunta */
+      max-height: 80vh; /* Limita la altura máxima del formulario */
+      overflow-y: auto; /* Permite desplazarse si el contenido es más grande que la ventana */
+    }
+
+    /* Estilo para las casillas de selección */
+    .form-check-input {
+      border: 2px solid #007bff;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .form-check-label {
+      font-weight: bold;
+    }
+
+    /* Estilo para los mensajes */
+    .alert {
+      margin-top: 10px;
+    }
+
+    /* Estilo para la imagen */
+    .img-pregunta {
+      width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
+      margin: 20px 0; /* Añadido margen arriba y abajo */
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #e9ecef;">
+  <div class="contenedor">
+    <h2>Formulario 70 preguntas sobre algoritmo</h2>
+    <form id="quizForm">
+      <!-- Pregunta 1 -->
+      <div class="mb-3">
+        <label for="respuesta1" class="form-label">1.- En le siguiente algoritmo de js crea una funcion que presente el mayor de un arreglo de 10 elemntos. ¿Que lineas generan un error?</label><br>
+        <!-- Imagen debajo de la pregunta 1 y antes de las respuestas -->
+        <img src="../../img/pregunta1.jpeg" alt="Imagen de Francia" class="img-pregunta">
+        <div class="form-check">
+          <input type="radio" name="respuesta1" value="8" class="form-check-input" id="respuesta1a">
+          <label for="respuesta1a" class="form-check-label">8</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta1" value="londres" class="form-check-input" id="respuesta1b">
+          <label for="respuesta1b" class="form-check-label">11</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta1" value="roma" class="form-check-input" id="respuesta1c">
+          <label for="respuesta1c" class="form-check-label">12</label>
+        </div>
+        <div id="mensaje1"></div> <!-- Contenedor para los mensajes de la pregunta 1 -->
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="mb-3">
+        <label for="respuesta2" class="form-label">2.- Se necesita desarrollar una aplicación para matriculación en línea, de una institución educativa. Tomando en cuenta algunas características particulares.</label><br>
+        <!-- Imagen debajo de la pregunta 2 y antes de las respuestas -->
+        <img src="../../img/pregunta2.jpeg" alt="Imagen de Italia" class="img-pregunta">
+        <label for="respuesta2" class="form-label">x. El costo total de matrícula de un estudiante en período ordinario, quién ha seleccionado I materias presenciales, 2 materias a distancia y 4 talleres prácticos
+         <p> y. El costo total de matrícula de un estudiante en período extraordinario, quién ha seleccionado 2 materias presenciales, 2 materias a distancia y 4 talleres prácticos.</p>
+          z. El costo total de matrícula de un estudiante en período especial, quién ha seleccionado 5 materias presenciales, 3 materias a distancia y 5 talleres prácticos.</label><br>
+
+        <div class="form-check">
+          <input type="radio" name="respuesta2" value="qq" class="form-check-input" id="respuesta2a">
+          <label for="respuesta2a" class="form-check-label">a. x=2700 y=4500, z= 7800
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta2" value="paris" class="form-check-input" id="respuesta2b">
+          <label for="respuesta2b" class="form-check-label">b. x=2852, y=4404, z= 7348
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta2" value="c" class="form-check-input" id="respuesta2c">
+          <label for="respuesta2c" class="form-check-label">c. x=2599, y=4163, z= 7705</label>
+        </div>
+        <div id="mensaje2"></div> <!-- Contenedor para los mensajes de la pregunta 2 -->
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="mb-3">
+        <label for="respuesta3" class="form-label">Dado el siguiente diagrama de flujo, siga la secuencia lógica de las instrucciones e indique cuál de las siguientes salidas es la correcta respecto a todos los valores que van tomando las variables: A, B , C</label><br>
+        <!-- Imagen debajo de la pregunta 3 y antes de las respuestas -->
+        <img src="../../img/pregunta3.jpg" alt="Imagen del río Amazonas" class="img-pregunta">
+        <div class="form-check">
+          <input type="radio" name="respuesta3" value="amazonas" class="form-check-input" id="respuesta3a">
+          <label for="respuesta3a" class="form-check-label"><img src="../../img/pregunta3.1.jpg"></label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta3" value="nilo" class="form-check-input" id="respuesta3b">
+          <label for="respuesta3b" class="form-check-label"><img src="../../img/pregunta3.2.jpeg" alt=""></label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta3" value="c" class="form-check-input" id="respuesta3c">
+          <label for="respuesta3c" class="form-check-label"><img src="../../img/pregunta3.3.jpeg" alt=""></label>
+        </div>
+        <div id="mensaje3"></div> <!-- Contenedor para los mensajes de la pregunta 3 -->
+      </div>
+
+
+
+
+      <div class="mb-3">
+        <label for="respuesta4" class="form-label">¿Cuál es la respuesta correcta?</label><br>
+        <img src="../../img/pregunta4.jpg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+        <div class="form-check">
+          <input type="radio" name="respuesta4" value="a" class="form-check-input" id="respuesta4a">
+          <label for="respuesta4a" class="form-check-label">a. Diagrama de flujo que presenta el número menor
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta4" value="b" class="form-check-input" id="respuesta4b">
+          <label for="respuesta4b" class="form-check-label">b. Diagrama de flujo que presenta el número mayor
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta4" value="b" class="form-check-input" id="respuesta4b">
+          <label for="respuesta4b" class="form-check-label">c. Diagrama de flujo que presenta el número mayor y menor
+          </label>
+        </div>
+        <div id="mensaje4"></div> <!-- Contenedor para los mensajes de la pregunta 4 -->
+      </div>
+
+      <div class="mb-3">
+        <label for="respuesta5" class="form-label">¿Qué se entiende por una condición anidada en logica de programación?</label><br>
+        <div class="form-check">
+          <input type="radio" name="respuesta5" value="africa" class="form-check-input" id="respuesta5a">
+          <label for="respuesta5a" class="form-check-label">a. Es una condición que contiene múltiples operadores lógicos en una sola línea.
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta5" value="asia" class="form-check-input" id="respuesta5b">
+          <label for="respuesta5b" class="form-check-label">b. Es una técnica para reducir el número de condiciones en un programa.
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta5" value="c" class="form-check-input" id="respuesta5b">
+          <label for="respuesta5b" class="form-check-label">c. Es cuando una condición condicional se encuentra dentro de otra condición condicional.
+
+          </label>
+        </div>
+        <div id="mensaje5"></div> <!-- Contenedor para los mensajes de la pregunta 5 -->
+      </div>
+
+      <div class="mb-3">
+        <label for="respuesta6" class="form-label">¿Cuál es una ventaja de utilizar expresiones lógicas compuestas en una estructura condicional?</label><br>
+        <div class="form-check">
+          <input type="radio" name="respuesta6" value="francia" class="form-check-input" id="respuesta6a">
+          <label for="respuesta6a" class="form-check-label">a. Reducen la cantidad de código necesario al eliminar condiciones.
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta6" value="españa" class="form-check-input" id="respuesta6b">
+          <label for="respuesta6b" class="form-check-label">b. Aseguran que el programa sea más rápido, ya que evalúan todas las condiciones a la vez.
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="respuesta6" value="c" class="form-check-input" id="respuesta6b">
+          <label for="respuesta6b" class="form-check-label">c. Permiten evaluar varias condiciones al mismo tiempo y tomar decisiones más complejas en el programa.
+
+          </label>
+        </div>
+        <div id="mensaje6"></div> <!-- Contenedor para los mensajes de la pregunta 6 -->
+      </div>
+      
+      <!-- Pregunta 7 -->
+<div class="mb-3">
+  <label for="respuesta7" class="form-label">Si un viaje en tren cuesta $5 por persona y un grupo de 6 personas toma el tren, ¿cuál será el costo total del viaje??</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta7" value="a" class="form-check-input" id="respuesta7a">
+    <label for="respuesta7a" class="form-check-label">a. 30 dólares
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta7" value="milán" class="form-check-input" id="respuesta7b">
+    <label for="respuesta7b" class="form-check-label">b. 40 dólares
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta7" value="milán" class="form-check-input" id="respuesta7b">
+    <label for="respuesta7b" class="form-check-label">c. 35 dólares
+
+    </label>
+  </div>
+  <div id="mensaje7"></div> <!-- Contenedor para los mensajes de la pregunta 7 -->
+</div>
+
+<!-- Pregunta 8 -->
+<div class="mb-3">
+  <label for="respuesta8" class="form-label">¿Qué se entiende por "mejora continua" en el contexto de desarrollo de software?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta8" value="daVinci" class="form-check-input" id="respuesta8a">
+    <label for="respuesta8a" class="form-check-label">a. Reestructurar el programa después de cada prueba.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta8" value="b" class="form-check-input" id="respuesta8b">
+    <label for="respuesta8b" class="form-check-label">b.  Realizar ajustes y mejoras periódicas para optimizar el código y satisfacer mejor los requisitos.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta8" value="picasso" class="form-check-input" id="respuesta8b">
+    <label for="respuesta8b" class="form-check-label">b.  Añadir constantemente nuevas características al programa.
+    </label>
+  </div>
+  <div id="mensaje8"></div> <!-- Contenedor para los mensajes de la pregunta 8 -->
+</div>
+
+<!-- Pregunta 9 -->
+<div class="mb-3">
+  <label for="respuesta9" class="form-label">¿Cuál es el propósito de una función en programación?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta9" value="ballenaAzul" class="form-check-input" id="respuesta9a">
+    <label for="respuesta9a" class="form-check-label">a. Organizar los datos de entrada de un programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta9" value="elefante" class="form-check-input" id="respuesta9b">
+    <label for="respuesta9b" class="form-check-label">b. Implementar una estructura de control como un bucle o condición.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta9" value="c" class="form-check-input" id="respuesta9b">
+    <label for="respuesta9b" class="form-check-label">c. Encapsular un conjunto de instrucciones que realizan una tarea específica y pueden ser reutilizadas.
+
+  </div>
+  <div id="mensaje9"></div> <!-- Contenedor para los mensajes de la pregunta 9 -->
+</div>
+
+<!-- Pregunta 10 -->
+<div class="mb-3">
+  <label for="respuesta10" class="form-label">Si tienes la función funcion valor-Suma (a, b) valor= a + b fin funcion, ¿qué hará si la llamas como resultado-Suma (3, 7) ?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta10" value="a" class="form-check-input" id="respuesta10a">
+    <label for="respuesta10a" class="form-check-label">a. Asignará el valor 10 a resultado</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta10" value="carbono" class="form-check-input" id="respuesta10b">
+    <label for="respuesta10b" class="form-check-label">b. Asignará el valor 0 a resultado</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta10" value="carbono" class="form-check-input" id="respuesta10b">
+    <label for="respuesta10b" class="form-check-label">c. Generará un error</label>
+  </div>
+  <div id="mensaje10"></div> <!-- Contenedor para los mensajes de la pregunta 10 -->
+</div>
+
+<!-- Pregunta 11 -->
+<div class="mb-3">
+  <label for="respuesta11" class="form-label">¿Cuál es la forma correcta de definir una función que no devuelve un valor en PSelnt?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta11" value="pacifico" class="form-check-input" id="respuesta11a">
+    <label for="respuesta11a" class="form-check-label">a.funcion nombreFuncion (parl, par2)
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta11" value="atlantico" class="form-check-input" id="respuesta11b">
+    <label for="respuesta11b" class="form-check-label">b. proceso nombre Funcion (parl, par2)
+    </label>
+  </div>
+    <div class="form-check">
+      <input type="radio" name="respuesta11" value="c" class="form-check-input" id="respuesta11b">
+      <label for="respuesta11b" class="form-check-label">c. procedimiento nombreFuncion (parl, par2)
+      </label>
+  </div>
+  <div id="mensaje11"></div> <!-- Contenedor para los mensajes de la pregunta 11 -->
+</div>
+
+<!-- Pregunta 12 -->
+<div class="mb-3">
+  
+  <label for="respuesta12" class="form-label">¿Cuál sera los valores de salida?</label><br>
+  <img src="../../img/PREGUNTA12.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta12" value="a" class="form-check-input" id="respuesta12a">
+    <label for="respuesta12a" class="form-check-label">1,2,3,4,5</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta12" value="canada" class="form-check-input" id="respuesta12b">
+    <label for="respuesta12b" class="form-check-label">0,1,2,3,4,5</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta12" value="c" class="form-check-input" id="respuesta12b">
+    <label for="respuesta12b" class="form-check-label">1,2,3,4,,6</label>
+  </div>
+  <div id="mensaje12"></div> <!-- Contenedor para los mensajes de la pregunta 12 -->
+</div>
+
+<!-- Pregunta 13 -->
+<div class="mb-3">
+ 
+  <label for="respuesta13" class="form-label">¿Cuántos continentes hay en el mundo?</label><br>
+  <img src="../../img/pregunta15.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta13" value="a" class="form-check-input" id="respuesta13a">
+    <label for="respuesta13a" class="form-check-label">9</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta13" value="6" class="form-check-input" id="respuesta13b">
+    <label for="respuesta13b" class="form-check-label">6</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta13" value="6" class="form-check-input" id="respuesta13b">
+    <label for="respuesta13b" class="form-check-label">5</label>
+  </div>
+  <div id="mensaje13"></div> <!-- Contenedor para los mensajes de la pregunta 13 -->
+</div>
+
+<!-- Pregunta 14 -->
+<div class="mb-3">
+  <label for="respuesta14" class="form-label">Analize las siguientes lineas del programa y seleccione¿cual es la respuesta que genera m?</label><br>
+  <img src="../../img/pregunta14.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta14" value="a" class="form-check-input">
+    <label for="respuesta14" class="form-check-label">1</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta14" value="barcelona" class="form-check-input">
+    <label for="respuesta14" class="form-check-label">3</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta14" value="valencia" class="form-check-input">
+    <label for="respuesta14" class="form-check-label">11</label>
+  </div>
+  <div id="mensaje14"></div> <!-- Contenedor para los mensajes de la pregunta 14 -->
+</div>
+
+<!-- Pregunta 15 -->
+<div class="mb-3">
+  <label for="respuesta15" class="form-label">Detecte el error que hay en las siguientes lineas de codigo</label><br>
+  <img src="../../img/pregunta15.1.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta15" value="a" class="form-check-input">
+    <label for="respuesta15" class="form-check-label">3</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta15" value="atlántico" class="form-check-input">
+    <label for="respuesta15" class="form-check-label">3,5</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta15" value="índico" class="form-check-input">
+    <label for="respuesta15" class="form-check-label">2</label>
+  </div>
+  <div id="mensaje15"></div> <!-- Contenedor para los mensajes de la pregunta 15 -->
+</div>
+
+<!-- Pregunta 16 -->
+<div class="mb-3">
+  <label for="respuesta16" class="form-label">¿Cuál es la diferencia principal entre el operador AND y el operador OR en una expresion condicional?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta16" value="garcia_marquez" class="form-check-input">
+    <label for="respuesta16" class="form-check-label">a. AND solo puede usarse con números, mientras que OR solo con cadenas.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta16" value="pablo_neruda" class="form-check-input">
+    <label for="respuesta16" class="form-check-label">b. AND evalúa solo una condición, mientras que OR evalúa todas.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta16" value="c" class="form-check-input">
+    <label for="respuesta16" class="form-check-label">c. AND devuelve verdadero solo si todas las condiciones son verdaderas, mientras que OR devuelve verdadero si al menos una condición es verdadera.</label>
+  </div>
+  <div id="mensaje16"></div> <!-- Contenedor para los mensajes de la pregunta 16 -->
+</div>
+
+<!-- Pregunta 17 -->
+<div class="mb-3">
+  <label for="respuesta17" class="form-label">Si un estudiante debe cursar 3 materias en el semestre, y cada una requiere 4 horas de estudio semanales, ¿cuántas horas en total necesitará estudiar en una semana?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta17" value="asia" class="form-check-input">
+    <label for="respuesta17" class="form-check-label">5h</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta17" value="b" class="form-check-input">
+    <label for="respuesta17" class="form-check-label">12h</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta17" value="áfrica" class="form-check-input">
+    <label for="respuesta17" class="form-check-label">18h</label>
+  </div>
+  <div id="mensaje17"></div> <!-- Contenedor para los mensajes de la pregunta 17 -->
+</div>
+
+<!-- Pregunta 18 -->
+<div class="mb-3">
+  <label for="respuesta18" class="form-label">¿Cuál es una ventaja de utilizar expresiones lógicas compuestas en una estructura condicional?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta18" value="opcion1" class="form-check-input">
+    <label for="respuesta18" class="form-check-label">a. Reducen la cantidad de código necesario al eliminar condiciones.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta18" value="opcion2" class="form-check-input">
+    <label for="respuesta18" class="form-check-label">b.Aseguran que el programa sea más rápido, ya que evalúan todas las condiciones a la vez.</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta18" value="c" class="form-check-input">
+    <label for="respuesta18" class="form-check-label">c. Permiten evaluar varias condiciones al mismo tiempo y tomar decisiones más complejas en el programa.</label>
+  </div>
+  <div id="mensaje18"></div> <!-- Contenedor para los mensajes de la pregunta 18 -->
+</div>
+
+<!-- Pregunta 19 -->
+<div class="mb-3">
+  <label for="respuesta19" class="form-label">Al analizar un problema, ¿por qué es importante definir claramente la entrada y la salida esperada?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta19" value="a" class="form-check-input">
+    <label for="respuesta19" class="form-check-label">a. Para asegurar que el programa cumpla con sus objetivos.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta19" value="opcion2" class="form-check-input">
+    <label for="respuesta19" class="form-check-label">b. Para garantizar que el programa sea compatible con múltiples plataformas.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta19" value="opcion3" class="form-check-input">
+    <label for="respuesta19" class="form-check-label">c. Para evitar la escritura de pseudocódigo.
+    </label>
+  </div>
+  <div id="mensaje19"></div> <!-- Contenedor para los mensajes de la pregunta 19 -->
+</div>
+
+<!-- Pregunta 20 -->
+<div class="mb-3">
+  <label for="respuesta20" class="form-label">¿Qué técnica de abstracción es útil al dividir un problema en múltiples subproblemas para su resolución en un programa?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta20" value="opcion1" class="form-check-input">
+    <label for="respuesta20" class="form-check-label">a. Uso de diagramas de flujo detallados.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta20" value="opcion2" class="form-check-input">
+    <label for="respuesta20" class="form-check-label">b. Implementación de un ciclo de repetición.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta20" value="c" class="form-check-input">
+    <label for="respuesta20" class="form-check-label">c. Descomposición modular o "divide y vencerás".
+    </label>
+  </div>
+  <div id="mensaje20"></div> <!-- Contenedor para los mensajes de la pregunta 20 -->
+</div>
+
+<!-- Pregunta 21 -->
+<div class="mb-3">
+  <label for="respuesta21" class="form-label">En la metodología de Entrada-Proceso-Salida (E-P-S), ¿qué describe mejor la fase de "Proceso"?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta21" value="opcion1" class="form-check-input">
+    <label for="respuesta21" class="form-check-label">a. Almacenar temporalmente los datos.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta21" value="opcion2" class="form-check-input">
+    <label for="respuesta21" class="form-check-label">b. Presentar el resultado final al usuario.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta21" value="c" class="form-check-input">
+    <label for="respuesta21" class="form-check-label">c. Realizar cálculos y transformar datos para obtener el resultado.
+    </label>
+  </div>
+  <div id="mensaje21"></div> <!-- Contenedor para los mensajes de la pregunta 21 -->
+</div>
+
+<!-- Pregunta 22 -->
+<div class="mb-3">
+  <label for="respuesta22" class="form-label">¿Cómo se define una función que muestra un mensaje en la consola sin devolver un valor?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta22" value="opcion1" class="form-check-input">
+    <label for="respuesta22" class="form-check-label">a.funcion Mostrar Mensaje (mensaje)</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta22" value="b" class="form-check-input">
+    <label for="respuesta22" class="form-check-label">b. procedimiento Mostrar Mensaje (mensaje)
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta22" value="opcion3" class="form-check-input">
+    <label for="respuesta22" class="form-check-label">c.funcion sin retorno Mostrar Mensaje (mensaje)
+    </label>
+  </div>
+  <div id="mensaje22"></div> <!-- Contenedor para los mensajes de la pregunta 22 -->
+</div>
+
+<!-- Pregunta 23 -->
+<div class="mb-3">
+  <label for="respuesta23" class="form-label">¿Qué palabra clave se utiliza para devolver un valor en una función con retorno en PSelnt?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta23" value="opcion1" class="form-check-input">
+    <label for="respuesta23" class="form-check-label">a. devuelve
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta23" value="b" class="form-check-input">
+    <label for="respuesta23" class="form-check-label">b.retorna
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta23" value="opcion3" class="form-check-input">
+    <label for="respuesta23" class="form-check-label">c.variable=
+    </label>
+  </div>
+  <div id="mensaje23"></div> <!-- Contenedor para los mensajes de la pregunta 23 -->
+</div>
+
+<!-- Pregunta 24 -->
+<div class="mb-3">
+ 
+  <label for="respuesta24" class="form-label">Seleccione la respuesta correcta</label><br>
+  <img src="../../img/pregunta24.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta24" value="a" class="form-check-input">
+    <label for="respuesta24" class="form-check-label">a.  Imprime el cuadrado de los números del 1 al 3.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta24" value="opcion2" class="form-check-input">
+    <label for="respuesta24" class="form-check-label">b.  Imprime los números del 1 al 3.</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta24" value="opcion3" class="form-check-input">
+    <label for="respuesta24" class="form-check-label">c. Imprime el cubo de los números del 1 al 3.</label>
+  </div>
+  <div id="mensaje24"></div> <!-- Contenedor para los mensajes de la pregunta 24 -->
+</div>
+
+<div class="mb-3">
+  <label for="respuesta25" class="form-label">¿Cuál es el propósito principal de la abstracción Entrada-Proceso-Salida en el desarrollo de software?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta25" value="opcion1" class="form-check-input">
+    <label for="respuesta25" class="form-check-label">a. Garantizar que el programa cumpla con las normativas legales.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta25" value="opcion2" class="form-check-input">
+    <label for="respuesta25" class="form-check-label">b. Crear el código necesario para la interfaz de usuario.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta25" value="c" class="form-check-input">
+    <label for="respuesta25" class="form-check-label">c. Dividir el problema en partes que puedan analizarse por separado.
+    </label>
+  </div>
+  <div id="mensaje25"></div> <!-- Contenedor para los mensajes de la pregunta 25 -->
+</div>
+
+<!-- Ejemplo para Pregunta 26 -->
+<div class="mb-3">
+  <label for="respuesta26" class="form-label">¿Qué se entiende por "corto circuito" en una evaluación de una expresión condicional compuesta con operadores lógicos?</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta26" value="a" class="form-check-input">
+    <label for="respuesta26" class="form-check-label">a.Es cuando la evaluación de una expresión condicional se detiene tan pronto como se determina el resultado, sin evaluar las demás condiciones.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta26" value="opcion2" class="form-check-input">
+    <label for="respuesta26" class="form-check-label">b. Es una técnica para optimizar el tiempo de ejecución en bucles.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta26" value="opcion3" class="form-check-input">
+    <label for="respuesta26" class="form-check-label">c. Es el proceso de evaluar todas las condiciones en una expresión lógica independientemente del resultado de las primeras.</label>
+  </div>
+  <div id="mensaje26"></div> <!-- Contenedor para los mensajes de la pregunta 26 -->
+</div>
+
+<!-- Ejemplo para Pregunta 27 -->
+<div class="mb-3">
+  <label for="respuesta27" class="form-label">¿Cuál de las siguientes técnicas es fundamental para el desarrollo de un modelo abstracto?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta27" value="a" class="form-check-input">
+    <label for="respuesta27" class="form-check-label">a. Análisis de requerimientos.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta27" value="opcion2" class="form-check-input">
+    <label for="respuesta27" class="form-check-label">b. Diseño visual.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta27" value="opcion3" class="form-check-input">
+    <label for="respuesta27" class="form-check-label">c. Pruebas de estrés.
+    </label>
+  </div>
+  <div id="mensaje27"></div> <!-- Contenedor para los mensajes de la pregunta 27 -->
+</div>
+
+<!-- Ejemplo para Pregunta 28 -->
+<div class="mb-3">
+  <label for="respuesta28" class="form-label">¿Qué es un pseudocódigo?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta28" value="opcion1" class="form-check-input">
+    <label for="respuesta28" class="form-check-label">a. Un diagrama que muestra el flujo de datos dentro de un sistema.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta28" value="b" class="form-check-input">
+    <label for="respuesta28" class="form-check-label">b. Una representación simplificada y estructurada de un algoritmo que utiliza un lenguaje intermedio entre el lenguaje humano y el lenguaje de programación.</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta28" value="opcion3" class="form-check-input">
+    <label for="respuesta28" class="form-check-label">c. El código fuente final de un programa que puede ejecutarse directamente en una máquina.
+    </label>
+  </div>
+  <div id="mensaje28"></div> <!-- Contenedor para los mensajes de la pregunta 28 -->
+</div>
+
+<!-- Ejemplo para Pregunta 29 -->
+<div class="mb-3">
+  <label for="respuesta29" class="form-label">¿Cuál de las siguientes afirmaciones sobre la complejidad algorítmica es correcta?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta29" value="opcion1" class="form-check-input">
+    <label for="respuesta29" class="form-check-label">a. La complejidad algorítmica solo se refiere al número de líneas de código.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta29" value="opcion2" class="form-check-input">
+    <label for="respuesta29" class="form-check-label">b. La complejidad algorítmica siempre es constante sin importar el tamaño del problema.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta29" value="c" class="form-check-input">
+    <label for="respuesta29" class="form-check-label">c. La complejidad algoritmica mide los recursos computacionales (tiempo y espacio) que un algoritmo necesita para ejecutarse.</label>
+  </div>
+  <div id="mensaje29"></div> <!-- Contenedor para los mensajes de la pregunta 29 -->
+</div>
+
+<!-- Ejemplo para Pregunta 30 -->
+<div class="mb-3">
+  <label for="respuesta30" class="form-label">¿Cuál es el propósito principal de una constante en un programa?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta30" value="a" class="form-check-input">
+    <label for="respuesta30" class="form-check-label">a. Proporcionar valores fijos que no cambian.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta30" value="opcion2" class="form-check-input">
+    <label for="respuesta30" class="form-check-label">b. Definir la estructura del programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta30" value="opcion3" class="form-check-input">
+    <label for="respuesta30" class="form-check-label">c. Controlar el flujo de ejecución.
+    </label>
+  </div>
+  <div id="mensaje30"></div> <!-- Contenedor para los mensajes de la pregunta 30 -->
+</div>
+
+<!-- Ejemplo para Pregunta 31 -->
+<div class="mb-3">
+  <label for="respuesta31" class="form-label">Si tienes la siguiente función:funcion valor=Cuadrado(a) valor= a * a fin funcion , ¿qué se obtiene al llamarla con valor=Cuadrado(5)?
+  </label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta31" value="opcion1" class="form-check-input">
+    <label for="respuesta31" class="form-check-label">a 10</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta31" value="b" class="form-check-input">
+    <label for="respuesta31" class="form-check-label">b. 25</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta31" value="opcion3" class="form-check-input">
+    <label for="respuesta31" class="form-check-label">c. 12</label>
+  </div>
+  <div id="mensaje31"></div> <!-- Contenedor para los mensajes de la pregunta 31 -->
+</div>
+
+<!-- Ejemplo para Pregunta 32 -->
+<div class="mb-3">
+  <label for="respuesta32" class="form-label">¿Cuál es la salida si llamamos a la función valor-Resta(10, 4) ?
+    funcion valor=Resta(a, b) valor= a - b fin funcion</label><br>
+  <div class="form-check">
+    <input type="radio" name="respuesta32" value="opcion1" class="form-check-input">
+    <label for="respuesta32" class="form-check-label">a. 10</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta32" value="b" class="form-check-input">
+    <label for="respuesta32" class="form-check-label">b. 6</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta32" value="opcion3" class="form-check-input">
+    <label for="respuesta32" class="form-check-label">c.4</label>
+  </div>
+  <div id="mensaje32"></div> <!-- Contenedor para los mensajes de la pregunta 32 -->
+</div>
+
+<!-- Ejemplo para Pregunta 33 -->
+<div class="mb-3">
+  <label for="respuesta33" class="form-label">Seleccione la respuesta correcta </label><br>
+  <img src="../../img/pregunta33.jpeg" alt="Imagen del río Amazonas" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta33" value="a" class="form-check-input">
+    <label for="respuesta33" class="form-check-label">a.8</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta33" value="opcion2" class="form-check-input">
+    <label for="respuesta33" class="form-check-label">b. 6</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta33" value="opcion1" class="form-check-input">
+    <label for="respuesta33" class="form-check-label">c. 4</label>
+  </div>
+  <div id="mensaje33"></div> <!-- Contenedor para los mensajes de la pregunta 32 -->
+</div>
+
+<!-- Pregunta 34 -->
+<div class="mb-3">
+  <label for="respuesta34" class="form-label">En el siguiente algoritmo suma los digitos de cualquier numero entero ¿en que linea genera error? </label><br>
+  <img src="../../img/pregunta34.jpeg" alt="Descripción de la imagen de la pregunta 34" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta34" value="a" class="form-check-input">
+    <label for="respuesta34" class="form-check-label">a. 4</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta34" value="b" class="form-check-input">
+    <label for="respuesta34" class="form-check-label">b. 5</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta34" value="c" class="form-check-input">
+    <label for="respuesta34" class="form-check-label">c. 5,6</label>
+  </div>
+  <div id="mensaje34"></div>
+</div>
+
+<!-- Pregunta 35 -->
+<div class="mb-3">
+  <label for="respuesta35" class="form-label">¿Cuál de las siguientes afirmaciones es verdadera sobre el uso de operadores lógicos en estructuras condicionales?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta35" value="a" class="form-check-input">
+    <label for="respuesta35" class="form-check-label">a. El operador NOT invierte el valor lógico de una condición.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta35" value="b" class="form-check-input">
+    <label for="respuesta35" class="form-check-label">b. El operador AND devuelve verdadero si al menos una condición es verdadera.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta35" value="c" class="form-check-input">
+    <label for="respuesta35" class="form-check-label">c. El operador OR devuelve verdadero solo si todas las condiciones son verdaderas.
+    </label>
+  </div>
+  <div id="mensaje35"></div>
+</div>
+
+<!-- Pregunta 36 -->
+<div class="mb-3">
+  <label for="respuesta36" class="form-label">Un repartidor debe entregar un paquete en 3 diferentes ubicaciones. Si el tiempo promedio de entrega en cada ubicación es d 15 minutos, ¿cuánto tiempo total le tomará hacer las entregas?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta36" value="a" class="form-check-input">
+    <label for="respuesta36" class="form-check-label">a. 30 minutos
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta36" value="b" class="form-check-input">
+    <label for="respuesta36" class="form-check-label">b. 45 minutos
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta36" value="c" class="form-check-input">
+    <label for="respuesta36" class="form-check-label">c. 50 minutos
+    </label>
+  </div>
+  <div id="mensaje36"></div>
+</div>
+
+<!-- Pregunta 37 -->
+<div class="mb-3">
+  <label for="respuesta37" class="form-label">¿Qué sucede si no se respetan las prioridades entre operadores lógicos en una expresión condicional?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta37" value="a" class="form-check-input">
+    <label for="respuesta37" class="form-check-label">a. La expresión siempre dará como resultado "falso" en lugar de "verdadero".
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta37" value="b" class="form-check-input">
+    <label for="respuesta37" class="form-check-label">b. La expresión puede evaluarse incorrectamente, dando resultados inesperados.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta37" value="c" class="form-check-input">
+    <label for="respuesta37" class="form-check-label">c. No afecta la evaluación, ya que los operadores tienen la misma prioridad.
+    </label>
+  </div>
+  <div id="mensaje37"></div>
+</div>
+
+<!-- Pregunta 38 -->
+<div class="mb-3">
+  <label for="respuesta38" class="form-label">¿Cuál es el objetivo de la optimización de algoritmos?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta38" value="a" class="form-check-input">
+    <label for="respuesta38" class="form-check-label">a. Aumentar el número de pasos en un algoritmo para hacerlo más preciso.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta38" value="b" class="form-check-input">
+    <label for="respuesta38" class="form-check-label">b. Reducir el uso de recursos como tiempo de ejecución o espacio en memoria.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta38" value="c" class="form-check-input">
+    <label for="respuesta38" class="form-check-label">c. Evitar el uso de pseudocódigo en la descripción del algoritmo.
+    </label>
+  </div>
+  <div id="mensaje38"></div>
+</div>
+
+<!-- Pregunta 39 -->
+<div class="mb-3">
+  <label for="respuesta39" class="form-label">¿ Cual de los siguientes NO es un tipo de estructura de control de un algoritmo? </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta39" value="a" class="form-check-input">
+    <label for="respuesta39" class="form-check-label">a. Secuencial </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta39" value="b" class="form-check-input">
+    <label for="respuesta39" class="form-check-label">b. condicional</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta39" value="c" class="form-check-input">
+    <label for="respuesta39" class="form-check-label">c. evaluación recursiva)</label>
+  </div>
+  <div id="mensaje39"></div>
+</div>
+
+<!-- Pregunta 40 -->
+<div class="mb-3">
+  <label for="respuesta40" class="form-label">Seleccione la respuesta correcta </label><br>
+  <img src="../../img/pregunta40.jpeg" alt="Descripción de la imagen de la pregunta 40" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta40" value="a" class="form-check-input">
+    <label for="respuesta40" class="form-check-label">a. true</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta40" value="b" class="form-check-input">
+    <label for="respuesta40" class="form-check-label">b. false</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta40" value="c" class="form-check-input">
+    <label for="respuesta40" class="form-check-label">c. undefined</label>
+  </div>
+  <div id="mensaje40"></div>
+</div>
+
+<!-- Pregunta 41 -->
+<div class="mb-3">
+  <label for="respuesta41" class="form-label">Seleccione la respuesta correcta </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta41" value="a" class="form-check-input">
+    <label for="respuesta41" class="form-check-label">a. 30</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta41" value="b" class="form-check-input">
+    <label for="respuesta41" class="form-check-label">b. 15</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta41" value="c" class="form-check-input">
+    <label for="respuesta41" class="form-check-label">c. 20</label>
+  </div>
+  <div id="mensaje41"></div>
+</div>
+
+<!-- Pregunta 42 -->
+<div class="mb-3">
+  <label for="respuesta42" class="form-label">¿Cuál es la función principal de los paréntesis en una expresión lógica que contiene operadores AND y OR?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta42" value="a" class="form-check-input">
+    <label for="respuesta42" class="form-check-label">a. Los paréntesis solo se utilizan en bucles, no en expresiones condicionales.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta42" value="b" class="form-check-input">
+    <label for="respuesta42" class="form-check-label">b. Los paréntesis se utilizan para agrupar condiciones y establecer la prioridad en la evaluación de la expresión.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta42" value="c" class="form-check-input">
+    <label for="respuesta42" class="form-check-label">c. Los paréntesis se utilizan para simplificar la expresión lógica eliminando operadores innecesarios.
+      C</label>
+  </div>
+  <div id="mensaje42"></div>
+</div>
+
+<!-- Pregunta 43 -->
+<div class="mb-3">
+  <label for="respuesta43" class="form-label">En un restaurante, cada plato tiene un costo de $12. Si un cliente pide 3 platos, ¿cuál será el costo total de su pedido?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta43" value="a" class="form-check-input">
+    <label for="respuesta43" class="form-check-label">a. 36 dólares
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta43" value="b" class="form-check-input">
+    <label for="respuesta43" class="form-check-label">b. 48 dólares
+      </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta43" value="c" class="form-check-input">
+    <label for="respuesta43" class="form-check-label">c. 24 dólares</label>
+  </div>
+  <div id="mensaje43"></div>
+</div>
+
+<!-- Pregunta 44 -->
+<div class="mb-3">
+  <label for="respuesta44" class="form-label">¿Cuál de las siguientes opciones describe un pseudocódigo?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta44" value="a" class="form-check-input">
+    <label for="respuesta44" class="form-check-label">a. Un diagrama de flujo simplificado que representa un algoritmo.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta44" value="b" class="form-check-input">
+    <label for="respuesta44" class="form-check-label">b. Un software usado para crear programas en diferentes lenguajes.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta44" value="c" class="form-check-input">
+    <label for="respuesta44" class="form-check-label">c. Una descripción estructurada y detallada de los pasos de un algoritmo.
+    </label>
+  </div>
+  <div id="mensaje44"></div>
+</div>
+
+<!-- Pregunta 45 -->
+<div class="mb-3">
+  <label for="respuesta45" class="form-label">¿Cuál es el principal objetivo de la depuración (debugging) en programación?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta45" value="a" class="form-check-input">
+    <label for="respuesta45" class="form-check-label">a. Identificar y corregir errores en el código fuente.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta45" value="b" class="form-check-input">
+    <label for="respuesta45" class="form-check-label">b. Generar un informe detallado del rendimiento del programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta45" value="c" class="form-check-input">
+    <label for="respuesta45" class="form-check-label">c. Optimizar el rendimiento de un programa.
+    </label>
+  </div>
+  <div id="mensaje45"></div>
+</div>
+
+<!-- Pregunta 46 -->
+<div class="mb-3">
+  <label for="respuesta46" class="form-label">¿Qué se entiende por análisis de requerimientos en el contexto de la programación?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta46" value="a" class="form-check-input">
+    <label for="respuesta46" class="form-check-label">a. Diseñar la estructura visual del software.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta46" value="b" class="form-check-input">
+    <label for="respuesta46" class="form-check-label">b. Identificar y documentar qué necesita el programa para resolver un problema.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta46" value="c" class="form-check-input">
+    <label for="respuesta46" class="form-check-label">c. Escribir el código necesario para el
+      C</label>
+  </div>
+  <div id="mensaje46"></div>
+</div>
+
+<!-- Pregunta 47 -->
+<div class="mb-3">
+  <label for="respuesta47" class="form-label">En un diagrama de flujo, ¿qué figura geométrica se utiliza para representar una decisión o condición?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta47" value="a" class="form-check-input">
+    <label for="respuesta47" class="form-check-label">a. Rombo
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta47" value="b" class="form-check-input">
+    <label for="respuesta47" class="form-check-label">b. Triángulo
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta47" value="c" class="form-check-input">
+    <label for="respuesta47" class="form-check-label">c. Rectángulo
+      </label>
+  </div>
+  <div id="mensaje47"></div>
+</div>
+
+<!-- Pregunta 48 -->
+<div class="mb-3">
+  <label for="respuesta48" class="form-label">¿Qué sucede si intentamos devolver un valor en una función sin retorno? </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta48" value="a" class="form-check-input">
+    <label for="respuesta48" class="form-check-label">a. Muestra un mensaje de error.</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta48" value="b" class="form-check-input">
+    <label for="respuesta48" class="form-check-label">b. Devuelve 0 automáticamente.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta48" value="c" class="form-check-input">
+    <label for="respuesta48" class="form-check-label">c.No sucede nada, pero no devuelve ningún valor.</label>
+  </div>
+  <div id="mensaje48"></div>
+</div>
+
+<!-- Pregunta 49 -->
+<div class="mb-3">
+  <label for="respuesta49" class="form-label">Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se le asigna como un porcentaje de su salario mensual que depende de su antigüedad en la empresa de acuerdo con la sig. Tabla.
+    <p>Tiempo Utilidad:</p>
+    Menos de 1 año 8 % del salario<br>
+    1 año o más y menos de 2 años 10% del salario<br>
+    2 años o más y menos de 5 años 15% del salario<br>
+    5 años o más y menos de 10 años 20% del salario<br>
+    10 años o más 30% del salario<br>
+    Análisis del Problema: </label><br>
+  <img src="../../img/pregunta49.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+  <img src="../../img/pregunta49.1.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+  <img src="../../img/pregunta49.2.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta49" value="a" class="form-check-input">
+    <label for="respuesta49" class="form-check-label">a. 1A, 2B, 3D, 4C
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta49" value="b" class="form-check-input">
+    <label for="respuesta49" class="form-check-label">b. 1A, 2D, 3B, 4C
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta49" value="c" class="form-check-input">
+    <label for="respuesta49" class="form-check-label">c. 1B 2C, 3D 4A
+    </label>
+  </div>
+  <div id="mensaje49"></div>
+</div>
+
+<!-- Pregunta 50 -->
+<div class="mb-3">
+  <label for="respuesta50" class="form-label">¿Cuál es la principal diferencia entre una estructura condicional simple y una estructura condicional compuesta?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta50" value="a" class="form-check-input">
+    <label for="respuesta50" class="form-check-label">a. La estructura condicional compuesta es siempre más eficiente que la simple.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta50" value="b" class="form-check-input">
+    <label for="respuesta50" class="form-check-label">b. No hay diferencias significativas entre ambas estructuras.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta50" value="c" class="form-check-input">
+    <label for="respuesta50" class="form-check-label">C. Una estructura condicional compuesta combina múltiples condiciones mediante operadores lógicos, mientras que una condicional simple evalúa solo una condición.</label>
+  </div>
+  <div id="mensaje50"></div>
+</div>
+
+<!-- Pregunta 51 -->
+<div class="mb-3">
+  <label for="respuesta51" class="form-label">¿Qué se entiende por una condición anidada en lógica de programación?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta51" value="a" class="form-check-input">
+    <label for="respuesta51" class="form-check-label">a. Es una técnica para reducir el número de condiciones en un programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta51" value="b" class="form-check-input">
+    <label for="respuesta51" class="form-check-label">b. Es cuando una condición condicional se encuentra dentro de otra condición condicional.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta51" value="c" class="form-check-input">
+    <label for="respuesta51" class="form-check-label">c. Es una condición que contiene múltiples operadores lógicos en una sola línea.
+    </label>
+  </div>
+  <div id="mensaje51"></div>
+</div>
+
+<!-- Pregunta 52 -->
+<div class="mb-3">
+  <label for="respuesta52" class="form-label">En lógica de programación, ¿qué operador tiene mayor prioridad al evaluar una expresión condicional compleja?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta52" value="a" class="form-check-input">
+    <label for="respuesta52" class="form-check-label">a. AND</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta52" value="b" class="form-check-input">
+    <label for="respuesta52" class="form-check-label">b. OR</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta52" value="c" class="form-check-input">
+    <label for="respuesta52" class="form-check-label">c. NOT</label>
+  </div>
+  <div id="mensaje52"></div>
+</div>
+
+<!-- Pregunta 53 -->
+<div class="mb-3">
+  <label for="respuesta53" class="form-label">¿Cuál es la diferencia principal entre un algoritmo iterativo y uno recursivo?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta53" value="a" class="form-check-input">
+    <label for="respuesta53" class="form-check-label">a. Un algoritmo iterativo no puede resolver problemas complejos, mientras que uno recursivo sí.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta53" value="b" class="form-check-input">
+    <label for="respuesta53" class="form-check-label">b. Un algoritmo iterativo repite un bloque de código utilizando bucles, mientras que un algoritmo recursivo se llama a sí mismo para resolver subproblemas.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta53" value="c" class="form-check-input">
+    <label for="respuesta53" class="form-check-label">c. Un algoritmo recursivo es más fácil de entender y programar que uno iterativo.</label>
+  </div>
+  <div id="mensaje53"></div>
+</div>
+
+<!-- Pregunta 54 -->
+<div class="mb-3">
+  <label for="respuesta54" class="form-label">¿Cuál es la definición correcta de un algoritmo?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta54" value="a" class="form-check-input">
+    <label for="respuesta54" class="form-check-label">a. Un lenguaje de programación que se utiliza para desarrollar software.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta54" value="b" class="form-check-input">
+    <label for="respuesta54" class="form-check-label">b. Un conjunto de pasos o instrucciones secuenciales que resuelven un problema.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta54" value="c" class="form-check-input">
+    <label for="respuesta54" class="form-check-label">c. Una estructura de datos que almacena información de manera eficiente.
+    </label>
+  </div>
+  <div id="mensaje54"></div>
+</div>
+
+<!-- Pregunta 55 -->
+<div class="mb-3">
+  <label for="respuesta55" class="form-label">¿Qué característica NO pertenece a los algoritmos?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta55" value="a" class="form-check-input">
+    <label for="respuesta55" class="form-check-label">a. Debe tener pasos bien definidos.
+      A</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta55" value="b" class="form-check-input">
+    <label for="respuesta55" class="form-check-label">b. Debe ser finito.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta55" value="c" class="form-check-input">
+    <label for="respuesta55" class="form-check-label">c. Requiere múltiples lenguajes de programación para su implementación.
+      C</label>
+  </div>
+  <div id="mensaje55"></div>
+</div>
+
+<!-- Pregunta 56 -->
+<div class="mb-3">
+  <label for="respuesta56" class="form-label">¿Cuál es la forma correcta de almacenar el resultado de una función con retorno? Seleccione una:
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta56" value="a" class="form-check-input">
+    <label for="respuesta56" class="form-check-label">a.  resultado = nombreFuncion (parl, par2)</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta56" value="b" class="form-check-input">
+    <label for="respuesta56" class="form-check-label">b. resultado <- nombreFuncion (parl, par2)</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta56" value="c" class="form-check-input">
+    <label for="respuesta56" class="form-check-label">c.  ejecutar resultado=nombreFuncion (parl, par2)</label>
+  </div>
+  <div id="mensaje56"></div>
+</div>
+
+<!-- Pregunta 57 -->
+<div class="mb-3">
+  <label for="respuesta57" class="form-label">Seleccione la respuesta correcta</label><br>
+  <img src="../../img/pregunta57.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta57" value="a" class="form-check-input">
+    <label for="respuesta57" class="form-check-label">a.9765625
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta57" value="b" class="form-check-input">
+    <label for="respuesta57" class="form-check-label">b. 50</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta57" value="c" class="form-check-input">
+    <label for="respuesta57" class="form-check-label">c. 500</label>
+  </div>
+  <div id="mensaje57"></div>
+</div>
+
+<!-- Pregunta 58 -->
+<div class="mb-3">
+  <label for="respuesta58" class="form-label">¿Cuál es el propósito de un bucle en la programación?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta58" value="a" class="form-check-input">
+    <label for="respuesta58" class="form-check-label">a. Declarar una variable que puede ser utilizada en todo el programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta58" value="b" class="form-check-input">
+    <label for="respuesta58" class="form-check-label">b. Romper la ejecución de un programa en varias partes.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta58" value="c" class="form-check-input">
+    <label for="respuesta58" class="form-check-label">c. Repetir un conjunto de instrucciones hasta que se cumpla una condición.</label>
+  </div>
+  <div id="mensaje58"></div>
+</div>
+<!-- Pregunta 59 -->
+<div class="mb-3">
+  <label for="respuesta59" class="form-label">En el desarrollo de modelos abstractos, ¿cuál es el primer paso para resolver un problema?
+  </label><br>
+  
+  <div class="form-check">
+    <input type="radio" name="respuesta59" value="a" class="form-check-input">
+    <label for="respuesta59" class="form-check-label">a. Implementar una solución directamente en código.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta59" value="b" class="form-check-input">
+    <label for="respuesta59" class="form-check-label">b. Probar la solución en distintos escenarios.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta59" value="c" class="form-check-input">
+    <label for="respuesta59" class="form-check-label">c. Analizar y comprender el problema en profundidad.
+    </label>
+  </div>
+  <div id="mensaje59"></div>
+</div>
+
+<!-- Pregunta 60 -->
+<div class="mb-3">
+  <label for="respuesta60" class="form-label">¿Qué resultado produce esta función al llamarla con Multiplicacion(4, 5) ?
+    funcion Multiplicacion(a, b) escribir a *b fin funcion</label><br>
+  
+  <div class="form-check">
+    <input type="radio" name="respuesta60" value="a" class="form-check-input">
+    <label for="respuesta60" class="form-check-label">a. 10</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta60" value="b" class="form-check-input">
+    <label for="respuesta60" class="form-check-label">b. 20</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta60" value="c" class="form-check-input">
+    <label for="respuesta60" class="form-check-label">c.15.</label>
+  </div>
+  <div id="mensaje60"></div>
+</div>
+
+<!-- Pregunta 61 -->
+<div class="mb-3">
+  <label for="respuesta61" class="form-label">Seleccione la respuesta correcta</label><br>
+  <img src="../../img/pregunta 61.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta61" value="a" class="form-check-input">
+    <label for="respuesta61" class="form-check-label">a. 12</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta61" value="b" class="form-check-input">
+    <label for="respuesta61" class="form-check-label">b. 18</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta61" value="c" class="form-check-input">
+    <label for="respuesta61" class="form-check-label">c. 21</label>
+  </div>
+  <div id="mensaje61"></div>
+</div>
+
+<!-- Pregunta 62 -->
+<div class="mb-3">
+  <label for="respuesta62" class="form-label">¿Cual es la respuesta correcta?</label><br>
+  <img src="../../img/pregunta62.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta62" value="a" class="form-check-input">
+    <label for="respuesta62" class="form-check-label">a. 6</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta62" value="b" class="form-check-input">
+    <label for="respuesta62" class="form-check-label">b. 7</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta62" value="c" class="form-check-input">
+    <label for="respuesta62" class="form-check-label">c. 12</label>
+  </div>
+  <div id="mensaje62"></div>
+</div>
+
+<!-- Pregunta 63 -->
+<div class="mb-3">
+  <label for="respuesta63" class="form-label">En el contexto de un programa, ¿cuál es el papel principal de una variable?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta63" value="a" class="form-check-input">
+    <label for="respuesta63" class="form-check-label">a. Almacenar solo texto para mostrarse en la interfaz.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta63" value="b" class="form-check-input">
+    <label for="respuesta63" class="form-check-label">b. Proveer una referencia inalterable a los datos.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta63" value="c" class="form-check-input">
+    <label for="respuesta63" class="form-check-label">c. Guardar valores temporales que se pueden modificar.
+    </label>
+  </div>
+  <div id="mensaje63"></div>
+</div>
+
+<!-- Pregunta 64 -->
+<div class="mb-3">
+  <label for="respuesta64" class="form-label">¿Cual es la respuesta correcta??</label><br>
+  <img src="../../img/pregunta64.jpeg" alt="Descripción de la imagen de la pregunta 49" class="img-pregunta">
+
+  <div class="form-check">
+    <input type="radio" name="respuesta64" value="a" class="form-check-input">
+    <label for="respuesta64" class="form-check-label">a. 4 3 2 1</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta64" value="b" class="form-check-input">
+    <label for="respuesta64" class="form-check-label">b. 1 2 3 4 </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta64" value="c" class="form-check-input">
+    <label for="respuesta64" class="form-check-label">c. 5 4 3 2 1</label>
+  </div>
+  <div id="mensaje64"></div>
+</div>
+
+<!-- Pregunta 65 -->
+<div class="mb-3">
+  <label for="respuesta65" class="form-label">Una tienda ofrece un descuento del 20% en un producto cuyo precio original es de $50. ¿Cuál será el precio final después del descuento?</label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta65" value="a" class="form-check-input">
+    <label for="respuesta65" class="form-check-label">a. 40)</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta65" value="b" class="form-check-input">
+    <label for="respuesta65" class="form-check-label">b. 35</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta65" value="c" class="form-check-input">
+    <label for="respuesta65" class="form-check-label">c. 20</label>
+  </div>
+  <div id="mensaje65"></div>
+</div>
+
+<!-- Pregunta 66 -->
+<div class="mb-3">
+  <label for="respuesta66" class="form-label">¿Qué es un compilador en el contexto de la programación?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta66" value="a" class="form-check-input">
+    <label for="respuesta66" class="form-check-label">a. Un programa que traduce el código fuente escrito en un lenguaje de alto nivel a código máquina ejecutable.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta66" value="b" class="form-check-input">
+    <label for="respuesta66" class="form-check-label">b. Un bloque de código que maneja errores durante la ejecución de un programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta66" value="c" class="form-check-input">
+    <label for="respuesta66" class="form-check-label">c. Un conjunto de herramientas utilizadas para escribir y ejecutar programas.
+    </label>
+  </div>
+  <div id="mensaje66"></div>
+</div>
+
+<!-- Pregunta 67 -->
+<div class="mb-3">
+  <label for="respuesta67" class="form-label">¿Cuál es la salida de esta función si llamamos a valor=Cuadrado (4) ?
+    funcion valor=Cuadrado(a) valor= a * a fin funcion</label><br>
+  
+  <div class="form-check">
+    <input type="radio" name="respuesta67" value="a" class="form-check-input">
+    <label for="respuesta67" class="form-check-label">a. 8</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta67" value="b" class="form-check-input">
+    <label for="respuesta67" class="form-check-label">b. 16</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta67" value="c" class="form-check-input">
+    <label for="respuesta67" class="form-check-label">c. 11</label>
+  </div>
+  <div id="mensaje67"></div>
+</div>
+
+
+<!-- Pregunta 68 -->
+<div class="mb-3">
+  <label for="respuesta68" class="form-label">En un sistema de cálculo de horas trabajadas, si un empleado trabaja 8 horas diarias durante 5 días, ¿cuántas horas en total trabajó en la semana?</label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta68" value="a" class="form-check-input">
+    <label for="respuesta68" class="form-check-label">a. 45</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta68" value="b" class="form-check-input">
+    <label for="respuesta68" class="form-check-label">b. 50</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta68" value="c" class="form-check-input">
+    <label for="respuesta68" class="form-check-label">c. 30</label>
+  </div>
+  <div id="mensaje68"></div>
+</div>
+
+<!-- Pregunta 69 -->
+<div class="mb-3">
+  <label for="respuesta69" class="form-label">¿Qué operador lógico se utiliza para evaluar si dos o más condiciones son verdaderas al mismo tiempo en una estructura condicional?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta69" value="a" class="form-check-input">
+    <label for="respuesta69" class="form-check-label">a. AND</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta69" value="b" class="form-check-input">
+    <label for="respuesta69" class="form-check-label">b. XOR</label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta69" value="c" class="form-check-input">
+    <label for="respuesta69" class="form-check-label">c. OR</label>
+  </div>
+  <div id="mensaje69"></div>
+</div>
+
+<!-- Pregunta 70 -->
+<div class="mb-3">
+  <label for="respuesta70" class="form-label">¿Qué significa que una variable tenga "ámbito local" en un programa?
+  </label><br>
+
+  <div class="form-check">
+    <input type="radio" name="respuesta70" value="a" class="form-check-input">
+    <label for="respuesta70" class="form-check-label">a. Que mantiene su valor durante toda la ejecución del programa.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta70" value="b" class="form-check-input">
+    <label for="respuesta70" class="form-check-label">b. Que se utiliza como parámetro de entrada para una función.
+    </label>
+  </div>
+  <div class="form-check">
+    <input type="radio" name="respuesta70" value="c" class="form-check-input">
+    <label for="respuesta70" class="form-check-label">c. .Que solo puede ser utilizada dentro de la función o bloque donde fue declarada. </label>
+  </div>
+  <div id="mensaje70"></div>
+</div>
+
+
+
+  <div>
+      <button type="button" class="btn btn-primary" onclick="verificarRespuestas()">Enviar</button>
+    </form>
+  </div>
+
+  
+
+  <!-- Vincula el archivo JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../../js/preguntasteo.js">
+  
+  </script>
+</body>
+</html>

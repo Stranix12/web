@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisores de un Número</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+        }
+
+        .container {
+            background-color: #07d3b8;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 350px;
+            transition: transform 0.2s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #2a1212;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: border 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #073dee;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #6e8efb;
+            color: rgb(45, 2, 2);
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a777e3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4f4242;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: #f7f9fc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(93, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Divisores de un Número</h2>
+        <form action="numeros divisores 6.html"></form>
+        <input type="number" id="numero" placeholder="Ingresa un número" />
+        <button onclick="calcularDivisores()">Calcular Divisores</button>
+        <div class="result" id="resultado"></div>
+        <div>
+            <pre id="r"> </pre>
+        </div>
+    </div>
+    
+
+    <script src="../../js/simulador.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>Ejercicios de Lógica de Programación</title>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      /* Contenedor de las tarjetas */
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Estilos de las tarjetas */
+      .card {
+        flex: 1 1 calc(20% - 20px); /* Ajuste para 5 tarjetas por fila */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+        min-height: 180px;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      .card p {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .card a {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .card a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+          <img src="../../img/logo.jpg" alt="Logo" />
+      </div>
+      <ul class="navbar-links">
+          <li><a href="../../proyecto.html">Inicio</a></li>
+          <li><a href="../../sobrenosotros.html">Acerca de</a></li>
+      </ul>
+  </nav>
+    <h1>Ejercicios de numeros</h1>
+    <div class="grid">
+      <!-- 40 Tarjetas (5 por fila, 8 filas en total) -->
+      <!-- Fila 1 -->
+
+      <div class="card">
+        <h3>1. Imprimir números impares</h3>
+        <p>Imprimir todos los números impares entre 1 y 50.</p>
+        <a href="./presimpares.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>2. Calcular la suma de los primeros 100 números</h3>
+        <p>Sumar todos los números del 1 al 100.</p>
+        <a href="./suma100.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>3. Suma de números pares</h3>
+        <p>Sumar todos los números pares desde 1 hasta un número dado por el usuario.</p>
+        <a href="./sumpares.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>4. Números divisibles por 3 y 5</h3>
+        <p>Imprimir todos los números del 1 al 100 que sean divisibles por 3 y 5.</p>
+        <a href="./divisores.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>5. Generar la tabla de multiplicar</h3>
+        <p>Generar la tabla de multiplicar de un número ingresado por el usuario.</p>
+        <a href="./tabla.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>6. Números Fibonacci</h3>
+        <p>Imprimir los primeros n números de la serie de Fibonacci.</p>
+        <p>Ejemplo: Si n = 7, la serie es: 0 1 1 2 3 5 8 13.</p>
+        <a href="./fibo.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>7. Calcular la multiplicación de n números</h3>
+        <p>Multiplicar todos los números del 1 al 10.</p>
+        <a href="./multiplicacion1-10.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>8. Factorial de un número</h3>
+        <p>Calcular el factorial de un número dado por el usuario.</p>
+        <p>Ejemplo: Num=5, resp= 5*4*3*2*1 = 120.</p>
+        <a href="./factorial.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>9. Imprimir múltiplos de un número</h3>
+        <p>Imprimir todos los divisores de un número dado entre 1 y 20.</p>
+        <a href="./divisores1-20.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>10. Presentar los divisores de un número</h3>
+        <p>Mostrar los divisores de un número excluyendo el propio número.</p>
+        <a href="./divisoresnum.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>11. Número perfecto</h3>
+        <p>Verificar si un número es perfecto (la suma de sus divisores excluyendo el número da como resultado el propio número).</p>
+        <a href="./perfecto.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>12. Comprobación de números primos</h3>
+        <p>Verificar si un número dado es primo.</p>
+        <a href="./primo.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>13. Invertir un número</h3>
+        <p>Invertir los dígitos de un número ingresado por el usuario.</p>
+        <a href="./invertido.html">Ver Ejercicio</a>
+      </div>
+      
+      <div class="card">
+        <h3>14. Número de dígitos de un número</h3>
+        <p>Contar cuántos dígitos tiene un número entero positivo.</p>
+        <a href="./digitos.html">Ver Ejercicio</a>
+      </div>
+      
+
+      <!-- Fila 3 - Añadir más tarjetas hasta completar 8 filas -->
+      <!-- Continua este mismo patrón hasta completar 40 tarjetas -->
+
+      <!-- ... (continuar añadiendo tarjetas) ... -->
+    </div>
+  </body>
+</html>
